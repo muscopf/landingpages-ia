@@ -1,0 +1,24 @@
+name: Deploy Locaweb
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy site/ para a Locaweb
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.LOCAWEB_FTP_SERVER }}
+          username: ${{ secrets.LOCAWEB_FTP_USERNAME }}
+          password: ${{ secrets.LOCAWEB_FTP_PASSWORD }}
+          local-dir: ./site/
+          server-dir: ${{ secrets.LOCAWEB_REMOTE_DIR }}

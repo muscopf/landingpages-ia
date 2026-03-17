@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Base</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f5f0e8;
+      color: #1f2937;
+      display: grid;
+      min-height: 100vh;
+      place-items: center;
+    }
+
+    main {
+      width: min(720px, calc(100vw - 32px));
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(31, 41, 55, 0.12);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 18px 40px rgba(17, 24, 39, 0.08);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 0.95;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Repositório pronto para deploy.</h1>
+    <p>O próximo passo é conectar este projeto ao GitHub, configurar os secrets da Locaweb e integrar o n8n para publicar as páginas aqui.</p>
+  </main>
+</body>
+</html>
